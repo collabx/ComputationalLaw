@@ -16,7 +16,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit" />
-  <title>CoolCivicService</title>
+  <title>CoolCivicSite</title>
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <!-- Chrome for Android theme color -->
@@ -54,9 +54,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="elements/elements.html">
   <!-- endreplace-->
 
-  <link rel="import" href="../polymer/polymer.html">
+  <link rel="import" href="polymer/polymer.html
+  ">
 
-  <link rel="import" href="../google-apis/google-plusone-api.html">
+  <link rel="import" href="google-apis/google-plusone-api.html">
+
+
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../iron-component-page/iron-component-page.html">
 
 
 </head>
@@ -132,36 +137,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <textarea id="t1"></textarea>
               </iron-autogrow-textarea>
 
-                <google-hangout-button></google-hangout-button>
+
+              <iron-component-page></iron-component-page>
+
 
               <paper-material elevation="1">
-                <p class="paper-font-body2">This is OtherOther section.</p>
+                <p class="paper-font-body2">Some other content too.</p>
               </paper-material>
 
 
-
-              <section>
-                <div class="layout horizontal center">
-                  <span class="flex">Default button</span>
-                  <span class="flex"><google-hangout-button></google-hangout-button></span>
-                </div>
-                <div class="layout horizontal center">
-                  <span class="flex">Narrow button</span>
-                  <span class="flex"><google-hangout-button width="72"></google-hangout-button></span>
-                </div>
-                <div class="layout horizontal center">
-                  <span class="flex">Wide Hangout on Air button</span>
-                  <span class="flex"><google-hangout-button type="onair" width="175"></google-hangout-button></span>
-                </div>
-                <div class="layout horizontal center">
-                  <span class="flex">Automatically launch Hangout app</span>
-                  <span class="flex">
-                    <google-hangout-button
-                      apps='[{"app_id" : "184219133185", "start_data" : "dQw4w9WgXcQ", "app_type" : "ROOM_APP" }]'
-                    ></google-hangout-button>
-                  </span>
-                </div>
-              </section>
 
 
 
