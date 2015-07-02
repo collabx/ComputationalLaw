@@ -206,6 +206,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
+
+  <div></div>
+  <script>
+    var msg = document.querySelector('div');
+    window.addEventListener('google-feeds-response', function(e) {
+      msg.innerHTML += e.target.localName + ' loaded' + '<br>';
+      console.log(e.detail.feed);
+    });
+
+    window.addEventListener('google-feeds-queryresponse', function(e) {
+      console.log('findFeeds response:', e.detail.entries);
+    });
+
+    var feeder = document.getElementById("feeder");
+    feeder.feeds = ['https://news.ycombinator.com/rss',
+    'http://feeds.bbci.co.uk/news/rss.xml'];
+  </script>
 </body>
 
 </html>
